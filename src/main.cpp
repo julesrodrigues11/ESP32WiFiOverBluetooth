@@ -10,10 +10,12 @@ bool deviceConnected = false;
 bool oldDeviceConnected = false;
 String wifiCredentials = "";
 
+#define SERIAL_DEBUG_BAUD 115200
+
 #define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
 #define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
 
-const int ledPin = 2;  // Define onboard LED pin (usually GPIO 2)
+const int ledPin = 2;  // Define onboard LED pin - For debugging purposes only
 
 class MyServerCallbacks: public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
@@ -36,7 +38,7 @@ class MyCallbacks: public BLECharacteristicCallbacks {
 };
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(SERIAL_DEBUG_BAUD);
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);  // Turn off the LED initially
 
