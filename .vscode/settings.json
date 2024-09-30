@@ -7,6 +7,12 @@
         "unordered_set": "cpp",
         "vector": "cpp",
         "string_view": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
     }
 }
