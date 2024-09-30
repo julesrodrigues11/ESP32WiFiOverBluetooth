@@ -39,6 +39,7 @@ class MyCallbacks: public BLECharacteristicCallbacks {
 
 void setup() {
   Serial.begin(SERIAL_DEBUG_BAUD);
+  
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);  // Turn off the LED initially
 
